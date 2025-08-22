@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Sahte Hack ��akas覺</title>
+<style>
+  body { background: black; color: lime; font-family: monospace; text-align:center; padding-top:50px;}
+  .hidden { display:none; }
+  button { padding:10px 20px; font-size:18px; margin-top:20px; }
+  #loading { margin-top:20px; }
+</style>
+</head>
+<body>
+
+<div id="step1">
+  <h1>Hiroshi tarafindan hacklendiniz!</h1>
+  <button onclick="nextStep(2)">Devam etmek i蓾n tikla</button>
+</div>
+
+<div id="step2" class="hidden">
+  <h1>Hiroshi hesabnza eriti!</h1>
+  <button onclick="nextStep(3)">Devam etmek i蓾n tikla</button>
+</div>
+
+<div id="step3" class="hidden">
+  <h1>Sifreleriniz 蓷liniyor...</h1>
+  <div id="loading">Y羹kleniyor: 0%</div>
+</div>
+
+<div id="final" class="hidden">
+  <h1>saka la saka aq hdskdneksnsks</h1>
+  <video width="320" height="180" autoplay muted loop>
+    <source src="ssstik.io_1755891930288.mp4" type="video/mp4">
+    Taray覺c覺n覺z video etiketini desteklemiyor.
+  </video>
+</div>
+
+<script>
+let progress = 0;
+function nextStep(step) {
+  document.querySelectorAll('div').forEach(d => d.classList.add('hidden'));
+  if(step === 3){
+    document.getElementById('step3').classList.remove('hidden');
+    let interval = setInterval(() => {
+      progress += 5;
+      document.getElementById('loading').innerText = `Y羹kleniyor: ${progress}%`;
+      if(progress >= 100){
+        clearInterval(interval);
+        document.getElementById('step3').classList.add('hidden');
+        document.getElementById('final').classList.remove('hidden');
+      }
+    }, 300);
+  } else {
+    document.getElementById(`step${step}`).classList.remove('hidden');
+  }
+}
+</script>
+
+</body>
+</html>
