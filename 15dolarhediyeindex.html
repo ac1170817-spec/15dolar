@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Sahte Hack Şakası</title>
+<title>Sahte Hack ÅžakasÄ±</title>
 <style>
   body { background: black; color: lime; font-family: monospace; text-align:center; padding-top:50px;}
   .hidden { display:none; }
@@ -14,24 +14,24 @@
 
 <div id="step1">
   <h1>Hiroshi tarafindan hacklendiniz!</h1>
-  <button onclick="nextStep(2)">Devam etmek i�in tikla</button>
+  <button onclick="nextStep(2)">Devam etmek için tikla</button>
 </div>
 
 <div id="step2" class="hidden">
   <h1>Hiroshi hesabnza eriti!</h1>
-  <button onclick="nextStep(3)">Devam etmek i�in tikla</button>
+  <button onclick="nextStep(3)">Devam etmek için tikla</button>
 </div>
 
 <div id="step3" class="hidden">
-  <h1>Sifreleriniz �aliniyor...</h1>
-  <div id="loading">Yükleniyor: 0%</div>
+  <h1>Sifreleriniz çaliniyor...</h1>
+  <div id="loading">YÃ¼kleniyor: 0%</div>
 </div>
 
 <div id="final" class="hidden">
   <h1>saka la saka aq hdskdneksnsks</h1>
   <video width="320" height="180" autoplay muted loop>
     <source src="ssstik.io_1755891930288.mp4" type="video/mp4">
-    Tarayıcınız video etiketini desteklemiyor.
+    TarayÄ±cÄ±nÄ±z video etiketini desteklemiyor.
   </video>
 </div>
 
@@ -43,7 +43,7 @@ function nextStep(step) {
     document.getElementById('step3').classList.remove('hidden');
     let interval = setInterval(() => {
       progress += 5;
-      document.getElementById('loading').innerText = `Yükleniyor: ${progress}%`;
+      document.getElementById('loading').innerText = `YÃ¼kleniyor: ${progress}%`;
       if(progress >= 100){
         clearInterval(interval);
         document.getElementById('step3').classList.add('hidden');
